@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <title>contact</title>
+
+   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <section class=" sub-header4">
+
+        <div class="navbar">
+          
+          <div class="logo">
+            <h2>CHASSIS <br><span>N Gears</span></h2>
+          </div>
+           
+
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+               
+              <ul>
+                 <li><a href="index.html"> HOME</a></li>
+                 <li><a href="products.html">PRODUCTS</a></li>
+                 <li><a href="services.html"> OUR-SERVICES</a></li>
+                 <li><a href="blog.html">BLOG </a></li>
+                 <li><a href="contact.html"> CONTACT-US</a></li>
+              </ul>
+           </div>
+           <i class="fa fa-bars"onclick="showMenu()"></i>
+
+        </div>
+
+    </section>
+
+    <section class="location">
+          <div class="container-L">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.968430074628!2d-0.4753295880070596!3d51
+            .53213887170143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48766e0a6fcc751f%3A0x43eae5c365df7a7a!
+            2sBrunel%20University%20London!5e0!3m2!1sen!2sin!4v1689488875441!5m2!1sen!2sin" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+           </div>
+             
+      </section>
+  
+     
+         
+  <section class="contact-us">
+
+    <div class="row">
+      <div class="contact-col">
+          <div class="msg">
+                <i class="fa fa-home"></i>
+                <span>
+                    <h5>XYZ  Road, ABC Building</h5>
+                    <p>london UK</p>
+                </span>
+          </div>
+
+          <div class="msg">
+              <i class="fa fa-phone"></i>
+              <span>
+                  <h5>+44 1234567890</h5>
+                  <p>Monday to Saturday,10AM to 6PM</p>
+              </span>
+            </div>
+
+          <div class="msg">
+              <i class="fa fa-envelope"></i>
+              <span>
+                  <h5>info@chassisngears.com</h5>
+                  <p>email your queries</p>
+              </span>
+          </div>
+       </div>
+
+       <div class="contact-col">
+
+            <form action="#" method="POST">
+     
+               <input type="text" id="name" name="name" placeholder="name">
+                   <p id="nameerror"> </p><br>
+               
+               <input type="email" id="email" name="email" placeholder="email">
+                   <p id="emailerror"></p><br>
+             
+               <input type="text" id="subject" name="subject" placeholder="subject">
+                    <p id="subjecterror"></p><br>
+               
+               <input type="text" id="message" name="message" placeholder="message">
+                    <p id="messageerror"></p><br>
+               
+               <button type="submit" class="btn" onclick="validate(event);">submit</button>
+               
+              </form>
+       </div>
+    </div>
+    </section>
+    <br>
+
+  <section class="footer">
+  
+    <div class="footer">
+
+    <h4>Chassis N Gears</h4>
+     <p> info@chassisngears.com</p>
+   
+   <div class="icons">
+       <i class="fa fa-facebook"></i>
+       <i class="fa fa-twitter"></i>
+       <i class="fa fa-instagram"></i>
+       <i class="fa fa-youtube"></i>
+   </div>
+ </div>
+ <section>
+
+
+
+      <!----------------------javascript for form validation using Reg Ex------>
+           
+        
+      <script type="text/javascript">
+        
+        function validate(){
+            var name= document.getElementById("name").value;
+            var email= document.getElementById("email").value;
+            var subject= document.getElementById("subject").value;
+            var message= document.getElementById("message").value;
+        
+   
+   
+   
+          var patternname= /^[A-Z]{1}[a-z]{1,}$/;
+          if(name==" " || name==null || patternname.test(name)== false)
+           {
+               document.getElementById("nameerror").innerHTML="Please Enter Name";
+               event.preventDefault();
+           } 
+           
+             else
+             {
+               document.getElementById("nameerror").innerHTML=" ";
+           }
+         
+          var patternemail= /^[a-zA-Z0-9_.]{1,}@[a-z]{3,}[.]{1}[a-z]{2,6}$/;
+          if(email==" " || email==null || patternemail.test(email)== false)
+           {
+               document.getElementById("emailerror").innerHTML="Please Enter valid email";
+               event.preventDefault();
+           } 
+           
+             else
+             {
+               document.getElementById("emailerror").innerHTML=" ";
+           }
+         
+         
+           var patternsubject= /^[A-Za-z0-9.]{5,50}$/;
+           if(subject==" " || subject==null || patternsubject.test(subject)== false)
+           {
+               document.getElementById("subjecterror").innerHTML="Please Enter subject";
+               event.preventDefault();
+           } 
+           
+             else
+             {
+               document.getElementById("subjecterror").innerHTML=" ";
+           }
+         
+         
+           var patternmessage= /^[A-Za-z0-9.]{5,50}$/;
+           if(message==" " || message==null || patternmessage.test(message)== false)
+           {
+               document.getElementById("messageerror").innerHTML="Please Enter valid text";
+               event.preventDefault();
+           } 
+           
+             else
+             {
+               document.getElementById("messageerror").innerHTML=" ";
+           }
+         
+         
+         }
+
+        </script>
+
+           <!--------------------javascript for togge menu     -->
+
+<script>
+
+  var navLinks = document.getElementById("navLinks");
+  
+  function showMenu(){
+     navLinks.style.right= "0";
+    }
+  function hideMenu(){
+      navLinks.style.right = "-200px";
+  }
+  
+  </script>    
+
+</body>
+</html>
